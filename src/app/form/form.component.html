@@ -1,0 +1,26 @@
+<form action="">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <!-- <section> -->
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" placeholder="João Augusto" [(ngModel)]="nome" required ><br>
+        <!-- </section> -->
+
+        <section>
+            <label for="email">Email: </label><br>
+            <input type="text" name="email" id="email" required placeholder="exemplo@email.com"><br>
+        </section>
+
+        <section>
+            <label for="idade">Idade:</label>
+            <input type="number" min="18" max="120" name="idade" id="idade" required placeholder="18" /><br>
+        </section>
+
+        <section>
+            <button type="submit" (click)="MostraNome()">Enviar</button>
+        </section>
+    </fieldset>
+</form>
+
+<app-mostrar-dados [nome]="pessoa.nome"></app-mostrar-dados>
