@@ -4,17 +4,17 @@
 
         <!-- <section> -->
             <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="nome" placeholder="João Augusto" [(ngModel)]="nome" required ><br>
+            <input type="text" name="nome" id="nome" placeholder="João Augusto" [(ngModel)]="pessoa.nome" required ><br>
         <!-- </section> -->
 
         <section>
             <label for="email">Email: </label><br>
-            <input type="text" name="email" id="email" required placeholder="exemplo@email.com"><br>
+            <input type="text" name="email" id="email" required placeholder="exemplo@email.com" [(ngModel)]="pessoa.email"><br>
         </section>
 
         <section>
             <label for="idade">Idade:</label>
-            <input type="number" min="18" max="120" name="idade" id="idade" required placeholder="18" /><br>
+            <input type="number" min="18" max="120" name="idade" id="idade" required placeholder="18" [(ngModel)]="pessoa.idade"/><br>
         </section>
 
         <section>
@@ -23,4 +23,4 @@
     </fieldset>
 </form>
 
-<app-mostrar-dados [nome]="pessoa.nome"></app-mostrar-dados>
+<app-mostrar-dados [nome]="pessoa.nome" *ngFor="let nome in pessoa.nome"></app-mostrar-dados>

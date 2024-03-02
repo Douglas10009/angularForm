@@ -1,9 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-mostrar-dados',
-  standalone: true,
-  imports: [],
   templateUrl: './mostrar-dados.component.html',
   styleUrl: './mostrar-dados.component.css'
 })
@@ -12,6 +10,6 @@ export class MostrarDadosComponent {
 
   mostraDados(){
     console.log(this.nome);
-    
+
   }
 }

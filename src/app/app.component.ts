@@ -5,10 +5,8 @@ import { MostrarDadosComponent } from "./mostrar-dados/mostrar-dados.component";
 
 @Component({
     selector: 'app-root',
-    standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, FormComponent, MostrarDadosComponent]
 })
 export class AppComponent {
   title = 'Formulario';
